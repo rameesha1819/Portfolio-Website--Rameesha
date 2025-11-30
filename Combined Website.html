@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rameesha Umar Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: #f4f7fb;
+      color: #1a1a1a;
+    }
+
+    /* Navigation */
+    nav {
+      background: #0d3b66;
+      padding: 18px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav h2 {
+      color: white;
+      font-size: 22px;
+      margin: 0;
+      font-weight: 600;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Pages */
+    .page {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+      padding: 60px 80px;
+    }
+
+    .active {
+      display: block;
+      opacity: 1;
+    }
+
+    h1 {
+      font-size: 38px;
+      font-weight: 700;
+      color: #0d3b66;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      font-size: 22px;
+      color: #0d3b66;
+      margin-top: 40px;
+    }
+
+    h4 {
+      font-size: 18px;
+      margin-top: 20px;
+      color: #0d3b66;
+    }
+
+    p, li {
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    ul {
+      margin-top: 5px;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      letter-spacing: 1px;
+      color: #144b79;
+      margin-top: -10px;
+    }
+
+    /* Home Page Layout */
+    .home-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+      min-height: 80vh;
+      padding: 0 40px;
+    }
+
+    .home-text {
+      flex: 1;
+      text-align: left;
+    }
+
+    .home-image {
+      flex: 1;
+      text-align: center;
+    }
+
+    .home-image img {
+      width: auto;
+      max-width: 300px;
+      height: auto;
+      border-radius: 12px;
+      object-fit: contain;
+    }
+
+    /* About Me Full Width Layout */
+    .about-text-full {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Projects & Contributions */
+    .projects-list {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .project-item p {
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .project-gallery {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .project-img {
+      max-width: 150px;  /* set max width */
+      height: auto;       /* maintain original aspect ratio */
+      border-radius: 10px;
+      object-fit: contain;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .nav-links a {
+        margin: 8px 0;
+      }
+
+      .home-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .home-text {
+        text-align: center;
+      }
+
+      .home-image img {
+        max-width: 70%;
+        margin-top: 20px;
+      }
+
+      .project-img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <h2>Rameesha Umar</h2>
+    <div class="nav-links">
+      <a href="#" onclick="showPage('home')">Home</a>
+      <a href="#" onclick="showPage('about')">About Me</a>
+      <a href="#" onclick="showPage('experience')">Experiences & Skills</a>
+      <a href="#" onclick="showPage('contact')">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HOME PAGE -->
+  <div id="home" class="page active">
+    <div class="home-container">
+      <div class="home-text">
+        <h1>Rameesha Umar</h1>
+        <p class="subtitle">GRAPHICS & DIGITAL MEDIA SPECIALIST</p>
+        <p class="subtitle">BS COMPUTER SCIENCE STUDENT</p>
+      </div>
+      <div class="home-image">
+        <img src="rameesha.jpg" alt="Rameesha Umar">
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT ME PAGE -->
+  <div id="about" class="page">
+    <h1>About Me</h1>
+    <div class="about-text-full">
+      <p>
+        I am a creative and detail-oriented BS Computer Science student with a strong foundation in Mathematics and Sciences, complemented by extensive leadership experience in media and student societies. Over the years, I have developed a unique blend of technical knowledge and creative skills, allowing me to design, edit, and manage digital media content effectively. My passion lies in exploring how technology can be combined with storytelling to create visually appealing and impactful solutions.
+      </p>
+      <p>
+        I have hands-on experience in video editing, photography, graphic design, animation, and social media management. I enjoy working on projects that challenge me to think outside the box and apply innovative solutions. Through my roles as Media President and Event Head, I have strengthened my leadership, team coordination, and project management skills. I am adept at training and mentoring juniors, delegating tasks efficiently, and ensuring high-quality outcomes in every project I undertake.
+      </p>
+      <p>
+        Apart from my professional and academic pursuits, I am an enthusiastic learner who enjoys experimenting with new technologies, exploring creative software, and taking on projects that combine art and coding. I take pride in my organizational skills, attention to detail, and ability to meet deadlines while maintaining creativity and quality. I am always eager to contribute to new ideas, collaborate with like-minded individuals, and expand my knowledge in the ever-evolving world of digital media and computer science.
+      </p>
+      <p>
+        Outside of academics and media, I enjoy photography and videography, creating animations and graphics, planning and organizing events, and baking. These hobbies allow me to express creativity in different ways while also teaching patience, precision, and perseverance. My goal is to continue developing my skills, explore innovative solutions, and make a meaningful impact in both technology and creative media.
+      </p>
+
+      <h3>Education</h3>
+      <ul>
+        <li><b>Kinnaird College for Women</b> — BSCS (2025–2029, In Progress)</li>
+        <li><b>Beaconhouse Defence Campus</b> — A Levels (2023–2025)</li>
+        <li><b>Beaconhouse Defence Campus</b> — O Levels, Pure Sciences (2020–2023)</li>
+      </ul>
+
+      <h3>Hobbies</h3>
+      <ul>
+        <li>Photography & Videography</li>
+        <li>Graphic Design & Animation</li>
+        <li>Creative Writing & Storytelling</li>
+        <li>Event Planning & Coordination</li>
+        <li>Leadership & Data Collecting</li>
+        <li>Baking</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- EXPERIENCE & SKILLS PAGE -->
+  <div id="experience" class="page">
+    <h1>Experiences & Skills</h1>
+
+    <h3>Experience</h3>
+    <ul>
+      <li><b>Intern – Taminzo Technologies (2025)</b> — Managed product listings, web-scraping data collection, product accuracy, and cross-team coordination.</li>
+      <li><b>President – Media Society (2024–2025)</b> — Directed media workflows, digital campaigns, and trained students in professional software and media handling.</li>
+      <li><b>President – Media Hub (2022–2023)</b> — Led council media hub and mentored juniors in editing and graphic design.</li>
+      <li><b>Event Head – Stars of Tomorrow (2022)</b> — Managed student data using Excel and structured digital tools.</li>
+      <li><b>Vice President – Media Hub (2021–2022)</b> — Supported media coverage and digital content planning.</li>
+    </ul>
+
+    <h3>Skills</h3>
+    <h4>Hard Skills</h4>
+    <ul>
+      <li>Video Editing & Photography</li>
+      <li>Adobe Creative Suite</li>
+      <li>Graphic Design</li>
+      <li>Social Media Management</li>
+      <li>E-commerce Media Editing</li>
+      <li>Content Management</li>
+    </ul>
+
+    <h4>Soft Skills</h4>
+    <ul>
+      <li>Leadership & Team Coordination</li>
+      <li>Creative Storytelling</li>
+      <li>Presentation & Communication</li>
+      <li>Problem Solving</li>
+      <li>Time Management</li>
+    </ul>
+
+    <h3>Awards & Honours</h3>
+    <ul>
+      <li>Student Council Recommendation Letter – Media Society President (2025)</li>
+      <li>Certificate of Honor – Media Hub President (2023)</li>
+      <li>High Achiever Certificate – O Levels (2023)</li>
+      <li>Certificate of Honor – Media Hub (2022)</li>
+    </ul>
+
+    <h3>Projects & Contributions</h3>
+    <div class="projects-list">
+      <!-- Project 1 with PDF link -->
+      <div class="project-item">
+        <p><b>Designed and edited official school magazine:</b> Created visually engaging layouts, coordinated with writers, and produced high-quality graphics for every edition to ensure professional presentation.</p>
+        <p><a href="Bulletin Magazine Beaconhouse Defence Campus.pdf" target="_blank">View Magazine PDF</a></p>
+      </div>
+
+      <!-- Project 2 with images -->
+      <div class="project-item">
+        <p><b>Created Snake Game in Scratch:</b> Developed a Snake game using Scratch, combining creativity with coding skills. Smooth controls and responsive interface for an engaging experience. Learned game logic, loops, and event handling.</p>
+        <div class="project-gallery">
+          <img src="snake.jpg" class="project-img">
+          <img src="code.jpg" class="project-img">
+          <img src="you win.jpg" class="project-img">
+        </div>
+      </div>
+
+      <!-- Project 3 with images -->
+      <div class="project-item">
+        <p><b>Contributed to Beaconhouse Global Projects Edition II:</b> Assisted in research, graphics design, and final layout preparation for international collaboration projects, ensuring accurate and professional output.</p>
+        
+      </div>
+
+      
+      <div class="project-item">
+        <p><b>Edited highlight reels for major events:</b> Compiled footage from events, added animations and music, and produced engaging highlight videos for school functions and presentations.
+See Instagram @bdcmediasocitey</p>
+        
+      </div>
+
+      <!-- Project 5 with images -->
+      <div class="project-item">
+        <p><b>Khwab Saaz Internship:</b> Managed content creation, graphics, and community engagement; documented activities and produced media that supported the NGO’s projects and campaigns effectively.</p>
+        <div class="project-gallery">
+          <img src="certi.jpg" " class="project-img">
+         
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT PAGE -->
+  <div id="contact" class="page">
+    <h1>Contact Me</h1>
+    <p><b>Phone:</b> 0332-0718389</p>
+    <p><b>Email:</b> rameeshaumar2006@gmail.com</p>
+
+    <h3>Availability</h3>
+    <ul>
+      <li>Available for internships, part-time roles, or projects</li>
+      <li>Flexible with timings and deadlines</li>
+      <li>Responds to emails/calls within one working day</li>
+    </ul>
+  </div>
+
+  <script>
+    function showPage(page) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById(page).classList.add('active');
+    }
+  </script>
+</body>
+</html>
